@@ -19,19 +19,11 @@ export function Header() {
       </div>
 
       <div className="flex flex-1 justify-end gap-3 sm:gap-6 items-center">
-        <label className={`hidden sm:flex flex-col min-w-40 h-10! max-w-64 rounded transition-all search-focus ${searchFocus ? 'shadow-lg' : ''}`}>
-          <div className="flex w-full flex-1 items-stretch rounded h-full">
-            <div className="text-muted-foreground flex border-none bg-input! items-center justify-center pl-4 rounded-l border-r-0">
-              <Search className="size-5" />
-            </div>
-            <Input
-              className="flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded text-foreground focus:outline-0 focus:ring-0 border-none bg-input! focus:border-none h-full placeholder:text-muted-foreground px-4 rounded-l-none border-l-0 pl-2 text-sm font-normal leading-normal"
-              placeholder="Search documentation..."
-              onFocus={() => setSearchFocus(true)}
-              onBlur={() => setSearchFocus(false)}
-            />
-          </div>
-        </label>
+        <nav className="hidden items-center gap-5 text-sm text-muted-foreground md:flex">
+          <a href="/" className="transition-colors hover:text-foreground">Home</a>
+          <a href="/docs" className="transition-colors hover:text-foreground">Docs</a>
+          <a href="/install" className="transition-colors hover:text-foreground">Install</a>
+        </nav>
       </div>
     </header>
   )

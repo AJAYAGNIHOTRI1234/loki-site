@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { Download } from '@/components/ui/icons'
+import Link from 'next/link'
 
 export function Hero() {
   return (
@@ -16,14 +17,18 @@ export function Hero() {
           </div>
           
           <div className="flex flex-wrap gap-4">
-            <Button className="min-w-40 h-12 px-6 bg-primary text-primary-foreground text-base font-bold leading-normal tracking-[0.015em] shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-shadow">
-              <Download className="size-5 mr-2" />
-              Download for Windows
-            </Button>
-            
-            <Button variant="secondary" className="min-w-40 h-12 px-6 bg-secondary text-secondary-foreground text-base font-bold leading-normal tracking-[0.015em] hover:bg-secondary/80 transition-colors">
-              Mac / Linux
-            </Button>
+            <Link href="/install#windows">
+              <Button className="min-w-40 h-12 px-6 bg-primary text-primary-foreground text-base font-bold leading-normal tracking-[0.015em] shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-shadow">
+                <Download className="size-5 mr-2" />
+                Download for Windows
+              </Button>
+            </Link>
+
+            <Link href="/install#macos">
+              <Button variant="secondary" className="min-w-40 h-12 px-6 bg-secondary text-secondary-foreground text-base font-bold leading-normal tracking-[0.015em] hover:bg-secondary/80 transition-colors">
+                Mac / Linux
+              </Button>
+            </Link>
           </div>
         </div>
 
